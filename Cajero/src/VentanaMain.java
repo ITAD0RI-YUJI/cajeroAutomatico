@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
+
 public class VentanaMain extends JFrame {
     Color fondo = new Color(38, 35, 53);
     Color text = new Color(194,190,212);
@@ -44,6 +46,32 @@ public class VentanaMain extends JFrame {
         contraseña.setBorder(BorderFactory.createLineBorder(margen));
         contraseña.setForeground(Color.WHITE);
 
+        JButton iniciar = new JButton("Iniciar");
+        iniciar.setBackground(fondo);
+        Dimension buttonSize = new Dimension(100, 30);
+        iniciar.setMinimumSize(buttonSize);
+        iniciar.setPreferredSize(buttonSize);
+        iniciar.setMaximumSize(buttonSize);
+        iniciar.setForeground(Color.WHITE);
+        iniciar.setAlignmentX(Component.CENTER_ALIGNMENT);
+        iniciar.setBorder(BorderFactory.createLineBorder(margen));
+        iniciar.setBackground(fondo);
+        iniciar.addActionListener(e-> new VentanaLogin());
+
+        JButton registrar = new JButton("Registrar");
+        registrar.setBackground(fondo);
+        registrar.setForeground(Color.WHITE);
+        registrar.setMinimumSize(buttonSize);
+        registrar.setPreferredSize(buttonSize);
+        registrar.setMaximumSize(buttonSize);
+        registrar.setAlignmentX(Component.CENTER_ALIGNMENT);
+        registrar.setBorder(BorderFactory.createLineBorder(margen));
+        registrar.setBackground(fondo);
+        registrar.setForeground(Color.WHITE);
+        registrar.addActionListener(e->new VentanaRegistrar());
+
+
+
         panel.add(Box.createVerticalGlue());
         panel.add(card);
         panel.add(Box.createRigidArea(new Dimension(0, 10))); // Espacio entre componentes
@@ -52,6 +80,10 @@ public class VentanaMain extends JFrame {
         panel.add(pass);
         panel.add(Box.createRigidArea(new Dimension(0, 10)));
         panel.add(contraseña);
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
+        panel.add(iniciar);
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
+        panel.add(registrar);
         panel.add(Box.createRigidArea(new Dimension(0, 10)));
         panel.add(Box.createVerticalGlue());
 
