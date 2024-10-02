@@ -19,20 +19,40 @@ public class VentanaMain extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.setBackground(fondo);
-        JLabel name = new JLabel("Nombre");
-        name.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        JTextField nombre = new JTextField();
-        nombre.setMaximumSize(new Dimension(300, 20)); // Ajustar el tamaño máximo
-        nombre.setAlignmentX(Component.CENTER_ALIGNMENT); // Centrar el campo de texto
-        nombre.setBackground(mini);
-        nombre.setBorder(BorderFactory.createLineBorder(margen));
-        nombre.setForeground(Color.WHITE);
+        //Ingreso en la tarjeta
+
+        JLabel card = new JLabel("Nombre");
+        card.setForeground(text);
+        card.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        JTextField tarjeta = new JTextField();
+        tarjeta.setMaximumSize(new Dimension(300, 20)); // Ajustar el tamaño máximo
+        tarjeta.setAlignmentX(Component.CENTER_ALIGNMENT); // Centrar el campo de texto
+        tarjeta.setBackground(mini);
+        tarjeta.setBorder(BorderFactory.createLineBorder(margen));
+        tarjeta.setForeground(Color.WHITE);
+        //Contraseña
+        JLabel pass = new JLabel("Contraseña");
+        pass.setForeground(text);
+        pass.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        JTextField contraseña = new JTextField();
+        contraseña.setMaximumSize(new Dimension(300, 20)); // Ajustar el tamaño máximo
+        contraseña.setAlignmentX(Component.CENTER_ALIGNMENT); // Centrar el campo de texto
+        contraseña.setBackground(mini);
+        contraseña.setBorder(BorderFactory.createLineBorder(margen));
+        contraseña.setForeground(Color.WHITE);
 
         panel.add(Box.createVerticalGlue());
-        panel.add(name);
+        panel.add(card);
         panel.add(Box.createRigidArea(new Dimension(0, 10))); // Espacio entre componentes
-        panel.add(nombre);
+        panel.add(tarjeta);
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
+        panel.add(pass);
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
+        panel.add(contraseña);
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
         panel.add(Box.createVerticalGlue());
 
 
