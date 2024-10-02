@@ -24,7 +24,7 @@ public class VentanaMain extends JFrame {
 
         //Ingreso en la tarjeta
 
-        JLabel card = new JLabel("Nombre");
+        JLabel card = new JLabel("N° Tarjeta");
         card.setForeground(text);
         card.setAlignmentX(Component.CENTER_ALIGNMENT);
 
